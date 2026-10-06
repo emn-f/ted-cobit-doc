@@ -1,0 +1,2 @@
+# Dependências Python para scripts de suporte e automação
+python-dotenv>=1.0.1

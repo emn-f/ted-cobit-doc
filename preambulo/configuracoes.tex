@@ -1,0 +1,40 @@
+% Margens
+\geometry{
+    left=3cm,
+    right=2cm,
+    top=3cm,
+    bottom=2cm
+}
+% Recuo do primeiro parágrafo
+\setlength{\parindent}{1.25cm}
+\linespread{1.5}
+
+% Configuração do listings
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    breaklines=true,
+    frame=single,
+    language=Java
+}
+
+% Configuração dos links
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0}
+}
+
+% Comandos próprios
+\newsavebox\affbox
+
+% Ajustes do abntex2
+\ifthenelse{\equal{\ABNTEXisarticle}{true}}{
+    \renewcommand{\maketitlehookb}{}
+}{}
+
+% Alinhamento vertical centralizado e espaçamento interno nas tabelas (tabularx)
+\renewcommand{\tabularxcolumn}[1]{m{#1}}
+\renewcommand{\arraystretch}{1.25}
