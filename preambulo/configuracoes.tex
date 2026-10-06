@@ -1,15 +1,7 @@
-% Margens
-\geometry{
-    left=3cm,
-    right=2cm,
-    top=3cm,
-    bottom=2cm
-}
-% Recuo do primeiro parágrafo
-\setlength{\parindent}{1.25cm}
-\linespread{1.5}
+% Ajuste de hifenação do modelo SBC
+\sloppy
 
-% Configuração do listings
+% Configuração do listings para código-fonte
 \lstset{
     basicstyle=\ttfamily\footnotesize,
     keywordstyle=\color{blue},
@@ -21,20 +13,12 @@
     language=Java
 }
 
-% Configuração dos links
+% Configuração de links (sem bordas visíveis no PDF final)
 \hypersetup{
     colorlinks=false,
     pdfborder={0 0 0}
 }
 
-% Comandos próprios
-\newsavebox\affbox
-
-% Ajustes do abntex2
-\ifthenelse{\equal{\ABNTEXisarticle}{true}}{
-    \renewcommand{\maketitlehookb}{}
-}{}
-
-% Alinhamento vertical centralizado e espaçamento interno nas tabelas (tabularx)
+% Alinhamento vertical centralizado e espaçamento em tabelas (tabularx)
 \renewcommand{\tabularxcolumn}[1]{m{#1}}
 \renewcommand{\arraystretch}{1.25}

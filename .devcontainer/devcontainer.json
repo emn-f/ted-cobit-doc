@@ -1,5 +1,5 @@
 {
-  "name": "TED COBIT (LaTeX & Python)",
+  "name": "TED COBIT (LaTeX SBC & Python)",
   "build": {
     "dockerfile": "Dockerfile"
   },
@@ -12,8 +12,20 @@
         "python.defaultInterpreterPath": "/usr/local/bin/python",
         "latex-workshop.latex.tools": [
           {
-            "name": "xelatex",
-            "command": "xelatex",
+            "name": "latexmk (pdf)",
+            "command": "latexmk",
+            "args": [
+              "-pdf",
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
+              "-outdir=%OUTDIR%",
+              "%DOC%"
+            ]
+          },
+          {
+            "name": "pdflatex",
+            "command": "pdflatex",
             "args": [
               "-synctex=1",
               "-interaction=nonstopmode",
@@ -22,7 +34,7 @@
             ]
           },
           {
-            "name": "latexmk",
+            "name": "latexmk (xetex)",
             "command": "latexmk",
             "args": [
               "-xelatex",
@@ -30,6 +42,16 @@
               "-interaction=nonstopmode",
               "-file-line-error",
               "-outdir=%OUTDIR%",
+              "%DOC%"
+            ]
+          },
+          {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+              "-synctex=1",
+              "-interaction=nonstopmode",
+              "-file-line-error",
               "%DOC%"
             ]
           },
@@ -43,9 +65,24 @@
         ],
         "latex-workshop.latex.recipes": [
           {
+            "name": "latexmk (pdfLaTeX) 🔃",
+            "tools": [
+              "latexmk (pdf)"
+            ]
+          },
+          {
+            "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+            "tools": [
+              "pdflatex",
+              "bibtex",
+              "pdflatex",
+              "pdflatex"
+            ]
+          },
+          {
             "name": "latexmk (XeLaTeX) 🔃",
             "tools": [
-              "latexmk"
+              "latexmk (xetex)"
             ]
           },
           {

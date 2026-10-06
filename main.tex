@@ -1,63 +1,39 @@
-\documentclass[12pt,oneside,a4paper,article]{abntex2}
+\documentclass[12pt]{article}
 
 \input{preambulo/pacotes}
 \input{preambulo/configuracoes}
 
 % --- INFORMAÇÕES DO TÍTULO ---
-\title{\textbf{GOVERNANÇA CORPORATIVA DE TECNOLOGIA DA INFORMAÇÃO:\\UM ESTUDO APLICADO SOBRE O FRAMEWORK COBIT 2019}}
+\title{Governança Corporativa de Tecnologia da Informação:\\Um Estudo Aplicado sobre o Framework COBIT 2019}
 
-% --- INFORMAÇÕES DO AUTOR E AFILIAÇÃO ---
-\author{
-    \vspace{1cm}
-    \textbf{Emanuel Arlan Sousa Silva Ferreira}\thanks{E-mail do autor: emanuel.ferreira@ucsal.edu.br} \\
-    \small Trabalho Efetivo Discente (TED) apresentado ao Curso de Engenharia de Software \par
-    \small Disciplina: Governança de TI \par
-    \vspace{1.5cm}
-    \small Instituição de ensino: \par
-    \small Universidade Católica do Salvador (UCSAL) \par
-    \small Escola de Computação e Tecnologia da Informação -- ECTI \par
-    \small Bacharelado em Engenharia de Software \par
-    \small Salvador/BA, Brasil
+% --- AUTORES E AFILIAÇÃO (PADRÃO SBC / UCSAL) ---
+\author{Emanuel Arlan Sousa Silva Ferreira\inst{1}}
+
+\address{Universidade Católica do Salvador (UCSAL)
+    \\Escola de Computação e Tecnologias da Informação
+    \\Bacharelado em Engenharia de Software
+    \\
+    \\{\footnotesize Avenida Professor Pinto de Aguiar, nº 2589, bairro Pituaçu, 41.740-090}
+    \\{\footnotesize Campus de Pituaçu - Salvador - BA - Brasil}
+    \\
+    \email{emanuel.ferreira@ucsal.edu.br}
 }
-
-% Configurações de aparência do PDF final
-\hypersetup{
-      colorlinks=false,       % false: boxed links; true: colored links
-      pdfborder={0 0 0},      % remove as bordas ao redor dos links
-}
-
-\date{}
 
 \begin{document}
-% Logotipo da UCSal no topo
-\begin{center}
-    \includegraphics[width=0.35\textwidth]{imagens-template/ucsal_logo.png} 
-\end{center}
 
-% Gera o bloco de Título, Autor e Afiliações
-{\let\newpage\relax\maketitle}
+\maketitle
 
-\vfill % Empurra a data para o final da página antes da quebra
-
-\begin{center}
-    \textbf{Outubro 2026}
-\end{center}
-
-\newpage
+% --- RESUMO E ABSTRACT ---
 \input{secoes/00-resumo}
 
-\tableofcontents*
-\newpage
-
-\textual
-% --- MAPA DE SEÇÕES DO ARTIGO ---
+% --- CORPO DO ARTIGO (SEÇÕES MODULARES) ---
 \input{secoes/01-introducao}
 \input{secoes/02-referencial-teorico}
 \input{secoes/03-metodologia}
 \input{secoes/04-desenvolvimento}
 \input{secoes/05-conclusao}
-\newpage
 
+% --- REFERÊNCIAS BIBLIOGRÁFICAS (CONFIGURAÇÃO DO PROJETO COM ABNT) ---
 \bibliographystyle{abntex2-alf}
 \bibliography{referencias}
 

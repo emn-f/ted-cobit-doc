@@ -1,37 +1,29 @@
-% Codificação
-\usepackage{fontspec}
-\usepackage[brazil]{babel}
-\setmainfont{Arial}
-\setsansfont{Arial}
+% Pacote de Formatação e Estilo SBC / UCSAL
+\usepackage{ucsal-template}
+\usepackage{caption2}
 
-% Correção de URLs longas
-\usepackage{xurl}
-\usepackage{microtype}
+% Gráficos, URLs e Codificação UTF-8
+\usepackage{graphicx}
+\graphicspath{{imagens/}}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
 
-% Matemática
+% Matemática e Tabelas
 \usepackage{amsmath}
 \usepackage{amssymb}
-
-% Tabelas
 \usepackage{array}
 \usepackage{tabularx}
-
-% Imagens
-\usepackage{graphicx}
 \usepackage{float}
 
-% Código-fonte
+% Listagem de Código-Fonte e Cores
 \usepackage{listings}
 \usepackage{xcolor}
 
-% Bibliografia
+% Citações e Referências (Mantendo a configuração ABNT do projeto)
 \usepackage[alf]{abntex2cite}
 
-% Layout
-\usepackage{geometry}
-\usepackage{setspace}
-\usepackage{indentfirst}
-
-% Outros
-\usepackage{authblk}
-\usepackage{pdfpages}
+% Nomes em Português para Elementos Flutuantes e Referências
+\renewcommand{\figurename}{Figura}
+\renewcommand{\tablename}{Tabela}
+\renewcommand{\refname}{Referências}
