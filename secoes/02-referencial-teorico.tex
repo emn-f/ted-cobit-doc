@@ -1,30 +1,99 @@
 \section{Referencial Teórico}
 
-\subsection{Conceito de Governança de TI}
+\subsection{Conceito e Distinção entre Governança e Gestão de TI}
 
-De acordo com \citeonline{weill2004governance}, governança de TI consiste na especificação dos direitos de decisão e no framework de responsabilidades que estimula comportamentos desejáveis na utilização da tecnologia da informação. Enquanto a gestão de TI foca na execução diária e entrega de serviços, a governança assegura direcionamento, avaliação e monitoramento estratégico.
+De acordo com \citeonline{weill2004governance}, a governança de TI consiste na especificação dos direitos de decisão e no framework de responsabilidades projetado para estimular comportamentos desejáveis na utilização corporativa da tecnologia da informação. Trata-se, portanto, de definir quem possui autoridade para deliberar sobre investimentos, arquitetura e riscos, superando o paradigma simplista da tecnologia enquanto centro isolado de custos operacionais.
 
-\subsection{O Framework COBIT 2019}
+A norma internacional \citeonline{iso2024iso38500} e a literatura especializada \cite{fernandes2014implantando} enfatizam a separação formal entre os papéis de governança e de gestão. A governança situa-se na esfera de responsabilidade do conselho de administração e da alta liderança executiva, incumbida de responder fundamentalmente ``o quê'' e ``por quê'' a organização demanda em recursos tecnológicos. Suas responsabilidades nucleares condensam-se na tríade: avaliar opções e demandas estratégicas, direcionar prioridades e investimentos, e monitorar continuamente os resultados obtidos.
 
-O COBIT 2019 estrutura a governança e a gestão de TI em 5 domínios fundamentais, totalizando 40 objetivos \cite{isaca2019governance}:
+Por sua vez, a gestão de TI atua no nível tático e operacional, cabendo aos gestores e equipes técnicas responder ``como'' as diretrizes corporativas serão concretizadas. Suas atividades envolvem planejar, construir, executar e monitorar as rotinas diárias de tecnologia. Configura-se, assim, um fluxo bidirecional e dinâmico: a governança estabelece as diretrizes e as fronteiras de decisão para a gestão, e a gestão reporta indicadores de desempenho e conformidade de volta aos órgãos deliberativos \cite{weill2004governance,isaca2019framework}.
 
-\begin{enumerate}
-    \item \textbf{EDM (\textit{Evaluate, Direct and Monitor})}: Domínio exclusivo de Governança corporativa, responsável por avaliar opções estratégicas, direcionar a liderança e monitorar conformidade e desempenho;
-    \item \textbf{APO (\textit{Align, Plan and Organize})}: Domínio de Gestão focado no alinhamento geral da estratégia de TI com a organização;
-    \item \textbf{BAI (\textit{Build, Acquire and Implement})}: Domínio focado no desenvolvimento, aquisição e implementação de soluções de TI;
-    \item \textbf{DSS (\textit{Deliver, Service and Support})}: Domínio voltado à entrega operacional, suporte aos usuários e segurança dos serviços;
-    \item \textbf{MEA (\textit{Monitor, Evaluate and Assess})}: Domínio orientado ao monitoramento de desempenho e conformidade interna e externa.
-\end{enumerate}
+\subsection{Origem e Evolução Histórica do COBIT}
 
-\subsection{Princípios do Sistema de Governança}
-
-O COBIT 2019 estabelece seis princípios norteadores para um sistema de governança eficaz \cite{isaca2019framework}:
+O \textit{Control Objectives for Information and Related Technologies} (COBIT) foi concebido em 1996 pela \textit{Information Systems Audit and Control Association} (ISACA) com o intuito inicial de fornecer um guia estruturado para que auditores financeiros pudessem avaliar controles internos em ambientes de processamento computacional em rápida expansão. Ao longo de três décadas de aprimoramento contínuo, o framework transcendeu a auditoria estrita para consolidar-se como o principal padrão global de governança e gestão de Informação e Tecnologia (I\&T) corporativa:
 
 \begin{itemize}
-    \item Fornecer valor aos \textit{stakeholders};
-    \item Abordagem holística;
-    \item Sistema de governança dinâmico;
-    \item Governança distinta de gestão;
-    \item Adaptado às necessidades organizacionais;
-    \item Sistema de governança fim-a-fim.
+    \item \textbf{COBIT 1 (1996) -- Auditoria}: Foco na criação de uma biblioteca de objetivos de controle para orientar auditorias financeiras e de sistemas contábeis;
+    \item \textbf{COBIT 2 (1998) -- Controle}: Expansão dos objetivos e introdução de orientações detalhadas sobre a avaliação de controles tecnológicos corporativos;
+    \item \textbf{COBIT 3 (2000) -- Gestão}: Transição conceitual para um framework de gestão de TI, incorporando métricas de desempenho e fatores críticos de sucesso;
+    \item \textbf{COBIT 4 e 4.1 (2005/2007) -- Governança, Valor e Risco}: Consolidação definitiva como modelo abrangente de governança corporativa de TI, articulando-se progressivamente aos modelos \textit{Val IT} (geração e sustentação de valor dos negócios) e \textit{Risk IT} (gestão e apetite ao risco corporativo);
+    \item \textbf{COBIT 5 (2012) -- Integração Unificada}: Unificação formal do COBIT 4.1, \textit{Val IT} e \textit{Risk IT} em um arcabouço holístico de cinco princípios e sete habilitadores, aproximando a estratégia empresarial da estratégia de tecnologia;
+    \item \textbf{COBIT 2019 (2018) -- Adaptabilidade e Dinamismo}: Lançado ao final de 2018 e denominado COBIT 2019, introduziu os Fatores de Design (\textit{Design Factors}), permitindo a criação de sistemas de governança sob medida, atualizações periódicas abertas e métricas de capacidade alinhadas ao CMMI \cite{isaca2019framework,isaca2019design}.
 \end{itemize}
+
+\subsection{Princípios Norteadores: Sistema versus Framework de Governança}
+
+A arquitetura do COBIT 2019 estabelece uma distinção rigorosa entre os princípios que sustentam o \textbf{sistema de governança} implementado na organização e os princípios que orientam o próprio \textbf{framework de governança} desenvolvido pela ISACA \cite{isaca2019framework}:
+
+\begin{enumerate}
+    \item \textbf{Princípios do Sistema de Governança}:
+    \begin{itemize}
+        \item \textit{Fornecer valor aos stakeholders}: Buscar o equilíbrio dinâmico entre a realização de benefícios, a otimização de riscos e a otimização de recursos;
+        \item \textit{Abordagem holística}: Estruturar a governança integrando componentes interconectados de naturezas diversas;
+        \item \textit{Sistema dinâmico de governança}: Reagir com agilidade quando fatores de design estratégicos ou tecnológicos são alterados;
+        \item \textit{Governança distinta da gestão}: Preservar a separação conceitual e operacional entre avaliação/direcionamento e planejamento/execução;
+        \item \textit{Adaptado às necessidades organizacionais}: Customizar o sistema com base nos parâmetros e no perfil exclusivo de cada negócio;
+        \item \textit{Sistema de ponta a ponta (fim-a-fim)}: Cobrir todas as funções corporativas de processamento de informação, não se restringindo ao departamento de TI.
+    \end{itemize}
+    \item \textbf{Princípios do Framework de Governança}:
+    \begin{itemize}
+        \item \textit{Baseado em um modelo conceitual}: Estruturado sobre componentes lógicos e relações formais de governança;
+        \item \textit{Aberto e flexível}: Modular para acomodar novos conceitos, tecnologias emergentes e atualizações sem desconstruir o núcleo estrutural;
+        \item \textit{Alinhado aos principais padrões}: Harmonizado com normas internacionais consolidadas, atuando de maneira interoperável.
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Estrutura Arquitetural do COBIT 2019: Domínios e Componentes de Governança}
+
+Para viabilizar a governança sistêmica e superar a visão isolada da TI, o COBIT 2019 estrutura a governança corporativa de informação e tecnologia como um ecossistema integrado às metas de negócio \cite{weill2004governance,feely2007getting,isaca2019framework}. Seu propósito primordial consiste em assegurar a geração contínua de valor corporativo mediante a manutenção do denominado triplo equilíbrio: a realização de benefícios, a mitigação e otimização de riscos, e a utilização racional e otimizada de recursos organizacionais \cite{isaca2019framework}.
+
+O núcleo do modelo organiza 40 objetivos fundamentais de governança e gestão, distribuídos em cinco domínios delimitados por perguntas norteadoras que demarcam as esferas de autoridade e atuação executiva \cite{isaca2019governance}:
+
+\begin{enumerate}
+    \item \textbf{EDM (\textit{Evaluate, Direct and Monitor})}: Domínio exclusivo de governança corporativa, de responsabilidade direta do conselho de administração e da alta direção executiva \cite{isaca2019governance}. Responde à questão fundamental: \textit{``Estamos direcionando a TI correta?''}. Sua atuação consiste em avaliar propostas e diretrizes estratégicas, direcionar a alocação de prioridades corporativas e monitorar o cumprimento de metas de conformidade e agregação de valor aos \textit{stakeholders}.
+    \item \textbf{APO (\textit{Align, Plan and Organize})}: Primeiro domínio da gestão técnica, voltado ao nível tático. Responde à diretriz: \textit{``Qual é o plano e a estrutura organizacional necessária?''}. Abrange a definição da arquitetura estratégica de TI, gestão do portfólio corporativo, planejamento orçamentário, gestão do capital humano, inovação e avaliação sistemática de riscos operacionais \cite{isaca2019governance}.
+    \item \textbf{BAI (\textit{Build, Acquire and Implement})}: Domínio de gestão que responde à pergunta: \textit{``Como construímos, adquirimos e entregamos as mudanças?''}. Foca na identificação de requisitos, concepção de soluções, aquisição de ativos, desenvolvimento, gestão de programas e projetos, além da administração controlada de mudanças organizacionais e tecnológicas.
+    \item \textbf{DSS (\textit{Deliver, Service and Support})}: Domínio operacional responsável por responder: \textit{``Como operamos com estabilidade e suporte no dia a dia corporativo?''}. Concentra a execução cotidiana de serviços, garantia de continuidade operacional, gestão de incidentes e problemas, e controles de segurança física e lógica nos ambientes de produção.
+    \item \textbf{MEA (\textit{Monitor, Evaluate and Assess})}: Domínio de controle que responde à questão: \textit{``O ambiente está funcionando adequadamente e em conformidade regulatória?''}. Conduz a medição do desempenho interno dos processos de TI, autoavaliação contínua dos controles e garantia de conformidade perante exigências legais, normas externas e órgãos reguladores.
+\end{enumerate}
+
+Essa segregação consolida a premissa de que a governança direciona e delimita as fronteiras de decisão, cabendo à gestão técnica a execução rotineira e a retroalimentação de métricas aos órgãos colegiados \cite{weill2004governance,isaca2019framework}.
+
+Todavia, a consecução desses 40 objetivos requer mais do que processos procedimentais. O COBIT 2019 estipula que a governança sustentável exige a integração de \textbf{sete componentes habilitadores} (\textit{components of a governance system}), materializando a abordagem holística do framework \cite{isaca2019framework,isaca2019governance}:
+
+\begin{itemize}
+    \item \textbf{Processos}: Conjuntos estruturados de práticas e fluxos de atividades que transformam entradas em saídas mensuráveis de governança;
+    \item \textbf{Estruturas Organizacionais}: Comitês executivos, conselhos e papéis formais investidos de autoridade deliberativa e direitos de decisão \cite{weill2004governance};
+    \item \textbf{Princípios, Políticas e Procedimentos}: Regras e diretrizes corporativas que traduzem as intenções estratégicas da governança em rotinas operacionais diárias;
+    \item \textbf{Informação}: Fluxos informacionais estruturados, cuja integridade, confidencialidade e disponibilidade sustentam deliberações assertivas do negócio;
+    \item \textbf{Cultura, Ética e Comportamento}: Fatores comportamentais, conduta ética individual e coletiva, atitudes e valores compartilhados pelos colaboradores e pela liderança;
+    \item \textbf{Pessoas, Habilidades e Competências}: Capital humano qualificado, dotado das competências técnicas, analíticas e gerenciais necessárias à condução das funções;
+    \item \textbf{Serviços, Infraestrutura e Aplicações}: Infraestrutura tecnológica, telecomunicações, sistemas corporativos e aplicações que viabilizam o processamento e a governança de I\&T.
+\end{itemize}
+
+\subsection{Benefícios Corporativos, Aplicabilidade e o COBIT como ``Guarda-Chuva Estratégico''}
+
+A institucionalização de um modelo de governança baseado no COBIT 2019 combate ativamente problemas crônicos que historicamente desgastam a relação entre as diretorias executivas e os setores técnicos, tais como o desalinhamento estratégico, investimentos sem retorno econômico verificável, proliferação de sistemas paralelos sem suporte (\textit{shadow IT}), lentidão decisória e incidentes operacionais sem controle \cite{fernandes2014implantando,feely2007getting}.
+
+Organizações maduras que implementam o COBIT 2019 reportam cinco benefícios corporativos fundamentais \cite{isaca2019framework}:
+\begin{enumerate}
+    \item \textbf{Alinhamento Estratégico Bidirecional}: Assegura convergência contínua entre os planos de expansão do negócio e as prioridades de investimento tecnológico;
+    \item \textbf{Gestão Proativa de Riscos e Segurança}: Tratamento preventivo de vulnerabilidades cibernéticas e mitigação de impactos sobre a continuidade das operações;
+    \item \textbf{Conformidade Regulatória e Auditabilidade}: Agilidade e rastreabilidade para responder a auditorias independentes, órgãos de controle governamentais e leis de proteção de dados;
+    \item \textbf{Tomada de Decisão Baseada em Métricas}: Adoção sistemática de indicadores-chave de desempenho (KPIs) e metas auditáveis, afastando juízos puramente subjetivos;
+    \item \textbf{Estabelecimento de Linguagem Comum}: Alinhamento terminológico entre o conselho deliberativo executivo e os gestores técnicos de tecnologia, suprimindo o jargão excessivo e aproximando a TI dos centros de poder.
+\end{enumerate}
+
+Em relação à aplicabilidade, o framework demonstra máxima aderência em setores sob elevada vigilância regulatória (instituições financeiras, órgãos governamentais, saúde, telecomunicações e energia) e em momentos de transição corporativa -- como processos de fusões e aquisições, rápida expansão de infraestrutura, imposição de resoluções de órgãos de controle ou crises desencadeadas por incidentes técnicos recorrentes \cite{fernandes2014implantando}.
+
+Sob o aspecto arquitetural, o COBIT 2019 não busca substituir normas especializadas nem opera em regime concorrencial. Conforme sintetizado por \citeonline{feely2007getting} e corroborado por \citeonline{fernandes2014implantando}, o COBIT posiciona-se como um \textbf{``guarda-chuva estratégico''} (ou meta-modelo de governança), responsável por prover direcionamento, priorização e controle de alto nível, enquanto delega a execução detalhada a frameworks operacionais consolidados no mercado:
+
+\begin{itemize}
+    \item \textbf{ITIL (\textit{Information Technology Infrastructure Library})}: Fornece as melhores práticas para a gestão do ciclo de vida dos serviços e operação contínua de TI, preenchendo as rotinas táticas e operacionais dos domínios APO e DSS \cite{fernandes2014implantando};
+    \item \textbf{ISO/IEC 27001 e ISO/IEC 27002}: Estabelecem diretrizes prescritivas e controles técnicos para a implementação do Sistema de Gestão de Segurança da Informação (SGSI), garantindo a proteção e integridade dos ativos informacionais;
+    \item \textbf{TOGAF (\textit{The Open Group Architecture Framework})}: Disciplina o desenho e a padronização das arquiteturas corporativas de tecnologia, interligando lógica de negócios, dados, aplicações e infraestrutura;
+    \item \textbf{PMBOK (\textit{Project Management Body of Knowledge})}: Padroniza a condução de projetos e gerenciamento de portfólio corporativo, operacionalizando as entregas do domínio BAI;
+    \item \textbf{ISO/IEC 38500:2024}: Norma basilar internacional que rege os princípios de governança corporativa de TI para órgãos diretivos, cujas diretrizes convergem integralmente com as premissas do COBIT 2019 \cite{iso2024iso38500}.
+\end{itemize}
+
+Essa interoperabilidade garante coerência estratégica transversal a toda a corporação sem desestruturar as especializações técnicas requeridas em cada área operacional \cite{isaca2019framework,feely2007getting}.

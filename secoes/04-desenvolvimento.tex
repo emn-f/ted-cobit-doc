@@ -2,17 +2,95 @@
 
 \subsection{Aplicação dos Fatores de Design}
 
-Os Fatores de Design atuam como direcionadores que modulam a importância relativa de cada um dos 40 objetivos de governança e gestão. Em um cenário corporativo típico focado em transformação digital e inovação, objetivos como \textit{APO02 (Gerenciar Estratégia)}, \textit{APO04 (Gerenciar Inovação)} e \textit{BAI03 (Gerenciar Identificação e Construção de Soluções)} recebem maior prioridade.
+O COBIT 2019 inovou substancialmente em relação às versões anteriores ao introduzir os Fatores de Design (\textit{Design Factors}), superando a ideia de que um modelo de governança deve ser aplicado de forma genérica e prescritiva \cite{isaca2019design}. Os Fatores de Design atuam como moduladores analíticos que influenciam a priorização relativa e os níveis-alvo de capacidade para cada um dos 40 objetivos de governança e gestão. O framework especifica 11 fatores categorizados pelo contexto corporativo:
+
+\begin{enumerate}
+    \item \textbf{Estratégia Empresarial}: Foco primário da organização (inovação/diferenciação, liderança em custos, foco no cliente ou estabilidade operacional);
+    \item \textbf{Metas de Negócio}: Objetivos estratégicos globais que se desdobram nas metas de alinhamento de TI;
+    \item \textbf{Perfil de Risco}: Apetite institucional ao risco e nível de exposição operacional e cibernética;
+    \item \textbf{Problemas Relacionados a I\&T}: Histórico recente de incidentes, falhas de segurança ou custos descontrolados de tecnologia;
+    \item \textbf{Cenário de Ameaças}: Nível de hostilidade e complexidade do ecossistema cibernético externo;
+    \item \textbf{Requisitos de Conformidade}: Pressões regulatórias impostas pelo setor de atuação (e.g., leis setoriais, BACEN, LGPD/GDPR);
+    \item \textbf{Papel da TI}: Função estratégica atribuída à tecnologia (suporte, fábrica, transição ou pilar nuclear estratégico);
+    \item \textbf{Modelo de Fornecimento de TI}: Utilização de serviços em nuvem, terceirização intensiva ou infraestrutura própria compartilhada;
+    \item \textbf{Métodos de Implementação de TI}: Metodologias predominantes de desenvolvimento e entrega (DevOps, métodos ágeis ou tradicional em cascata);
+    \item \textbf{Estratégia de Adoção de Tecnologia}: Postura frente a inovações (pioneiro inovador, seguidor rápido ou conservador);
+    \item \textbf{Tamanho da Empresa}: Porte organizacional, complexidade geográfica e número de colaboradores.
+\end{enumerate}
+
+Na prática operacional, a avaliação quantitativa desses fatores viabilizada pelo \textit{COBIT 2019 Design Toolkit} permite derivar uma matriz de governança customizada. Em estudos empíricos recentes, como a investigação conduzida por \citeonline{tangka2023information} em uma operadora logística portuária (\textit{PT. Pelindo TPK Bitung}), a aplicação dos Fatores de Design demonstrou que ambientes submetidos a regimes severos de conformidade e riscos operacionais priorizam fortemente objetivos de segurança da informação e entrega de serviços operacionais, notadamente os objetivos do domínio DSS (\textit{Deliver, Service and Support}).
 
 \subsection{Modelo de Capacidade de Processos}
 
-O COBIT 2019 adota a escala de capacidade baseada no padrão CMMI (\textit{Capability Maturity Model Integration}), variando de 0 a 5:
+Para a medição e avaliação evolutiva dos processos de governança, o COBIT 2019 adota o modelo de capacidade baseado na escala internacional do CMMI (\textit{Capability Maturity Model Integration}), estruturado em níveis contínuos de 0 a 5 \cite{isaca2019framework}:
 
 \begin{itemize}
-    \item \textbf{Nível 0 - Incompleto}: O processo não atinge seu propósito;
-    \item \textbf{Nível 1 - Inicial}: O processo atinge seu propósito por meio de conjunto básico de atividades;
-    \item \textbf{Nível 2 - Gerenciado}: O processo é planejado, monitorado e ajustado;
-    \item \textbf{Nível 3 - Definido}: O processo é bem documentado e padronizado em nível organizacional;
-    \item \textbf{Nível 4 - Quantitativamente Gerenciado}: O processo é medido e controlado estatisticamente;
-    \item \textbf{Nível 5 - Em Otimização}: O processo busca melhoria contínua e inovação proativa.
+    \item \textbf{Nível 0 -- Incompleto}: O processo não atinge seu propósito essencial; práticas básicas não são executadas ou são totalmente desestruturadas;
+    \item \textbf{Nível 1 -- Inicial}: O processo atinge seu propósito geral por meio de um conjunto básico e informal de atividades executadas;
+    \item \textbf{Nível 2 -- Gerenciado}: O processo é devidamente planejado, executado, monitorado e corrigido, gerando produtos de trabalho controlados;
+    \item \textbf{Nível 3 -- Definido}: O processo é formalmente documentado, institucionalizado e padronizado em nível corporativo;
+    \item \textbf{Nível 4 -- Quantitativamente Gerenciado}: O processo é guiado por métricas estatísticas e quantitativas de desempenho e qualidade;
+    \item \textbf{Nível 5 -- Em Otimização}: O processo fundamenta-se na melhoria contínua, análise preditiva e busca ativa por inovações tecnológicas.
 \end{itemize}
+
+A medição de capacidade fornece um mapa claro de lacunas corporativas (\textit{gap analysis}). Como verificado por \citeonline{tangka2023information}, a avaliação empírica do processo \textit{DSS05 (Gerenciar Serviços de Segurança)} revelou nível 3 de capacidade (processo definido), indicando que os controles operacionais estavam implementados com sucesso, mas sinalizando a necessidade premente de aprimorar a formalização das políticas de auditoria periódica e conformidade normativa para alcançar patamares quantitativos superiores.
+
+\subsection{Estudo de Caso Aplicado: Reestruturação da Governança de TI no Banco Central da Nigéria (\textit{Central Bank of Nigeria} -- CBN)}
+
+Para examinar o comportamento prático do COBIT em organizações caracterizadas por extrema complexidade estrutural e pressão regulatória, analisa-se o caso de reestruturação de governança vivenciado pelo Banco Central da Nigéria (\textit{Central Bank of Nigeria} -- CBN), reportado na literatura de governança da ISACA \cite{teitler2022case}. Como instituição responsável pela estabilidade financeira e monetária da maior economia do continente africano, o CBN operava em 2015 com uma estrutura capilarizada em 27 filiais operacionais, um quadro funcional de aproximadamente 9.000 servidores públicos e um departamento de TIC com mais de 300 especialistas dedicados.
+
+\subsubsection{Diagnóstico do Cenário Operacional Crítico (2015)}
+
+Conforme preconizado pelos acordos regulatórios bancários internacionais (como o Acordo da Basileia), o CBN mantinha certificações operacionais na norma ISO/IEC 27001 e executava rotinas de atendimento de serviços balizadas pelo catálogo do ITIL \cite{teitler2022case}. Apesar da vigência dessas certificações técnicas, a organização padecia de severos impasses na gestão e governança de tecnologia:
+
+\begin{itemize}
+    \item \textbf{Operação Reativa Permanente}: A equipe de TI atuava em constante regime de emergência (``apagando incêndios''), desprovida de planejamento de capacidade operacional e sem previsibilidade para antecipar demandas;
+    \item \textbf{Prática Generalizada de \textit{Shadow IT}}: Os departamentos e unidades de negócio contornavam rotineiramente a diretoria de TI, submetendo propostas de aquisição de novos sistemas tecnológicos diretamente ao conselho deliberativo executivo do banco;
+    \item \textbf{Ausência de Triagem Técnica e Imposição de Mandatos}: Projetos eram aprovados unilateralmente pelo conselho sem consulta prévia quanto à viabilidade na infraestrutura instalada ou dimensionamento das equipes de desenvolvimento, gerando metas e prazos tecnicamente inexequíveis;
+    \item \textbf{Fracasso na Realização de Valor}: Sistemas contratados eram entregues com atrasos vultosos e estouros orçamentários, sem que houvesse qualquer mecanismo para mensurar se os benefícios econômicos previstos nos estudos de viabilidade haviam sido concretizados após a entrada em produção \cite{teitler2022case,weill2004governance}.
+\end{itemize}
+
+\subsubsection{Estratégia Metodológica e Intervenção de Governança (2016)}
+
+Diante da perda de credibilidade institucional da TI e do agravamento dos atritos com os órgãos de controle interno, o Comitê Diretor de TIC do CBN deliberou, no início de 2016, a implementação de uma intervenção abrangente alicerçada nas diretrizes do COBIT \cite{teitler2022case}. A abordagem estruturou-se em um plano de ação de cinco fases:
+
+\begin{enumerate}
+    \item \textbf{Revisão Conceitual do COBIT}: Capacitação da liderança de TI nas premissas fundamentais de governança, princípios de alinhamento e componentes habilitadores da ISACA;
+    \item \textbf{Engajamento com as Áreas de Negócio}: Realização de ciclos estruturados de entrevistas diagnósticas com lideranças de aproximadamente 20 diretorias executivas de negócio, estabelecendo um canal de escuta ativa sobre as necessidades estratégicas da corporação;
+    \item \textbf{Análise de Lacunas (\textit{Gap Analysis})}: Confronto criterioso entre os processos operacionais vigentes no CBN e os objetivos prescritos pelo modelo de referência do COBIT;
+    \item \textbf{Mapeamento Sistemático de Dores Críticas}: Catalogação minuciosa dos gargalos decisórios, sobreposições de autoridade, fontes de retrabalho e pontos críticos de atrito interdepartamental;
+    \item \textbf{Definição de Ações Estruturantes e Governança Compartilhada}: Reestruturação formal do Comitê de Direção de TI, que passou a ser compartilhado institucionalmente com a integração direta de cinco diretores executivos de áreas finalísticas de negócio (com destaque para Risco Corporativo, Auditoria Interna e Recursos Humanos) \cite{teitler2022case}.
+\end{enumerate}
+
+No plano tático, a estratégia priorizou o domínio de governança \textbf{EDM (\textit{Evaluate, Direct and Monitor})}, articulado estreitamente aos processos de planejamento estratégico do domínio APO \cite{teitler2022case}. Essa reformulação instituiu uma rigorosa segregação de direitos deliberativos \cite{weill2004governance}: revogou-se o canal discricionário pelo qual o conselho aprovava projetos isolados, determinando-se que qualquer demanda tecnológica passasse compulsoriamente por uma triagem colegiada de viabilidade técnica, arquitetural e financeira no comitê de governança compartilhada. Paralelamente, estabeleceu-se a gestão contínua sobre o ciclo de vida dos benefícios corporativos, rastreando o retorno pretendido desde o \textit{business case} inicial até a mensuração de impactos operacionais no pós-implantação.
+
+\subsubsection{Mecanismos de Monitoramento e Resultados Obtidos}
+
+Para sustentar a efetividade da governança no longo prazo, o CBN estabeleceu três mecanismos perenes de monitoramento contínuo \cite{teitler2022case}:
+
+\begin{itemize}
+    \item \textbf{KPIs Anuais Estratégicos}: Definição de metas formais de serviço e indicadores de entrega de valor atrelados aos objetivos do plano estratégico da instituição;
+    \item \textbf{Comitê Mensal de Risco Integrado}: Supressão do isolamento departamental dos riscos de TI; as métricas de segurança cibernética e continuidade operacional foram incorporadas diretamente à Matriz de Risco Corporativo do banco central;
+    \item \textbf{Avaliações Regulares de Conformidade}: Atualização periódica das políticas de governança e auditoria contínua quanto à aderência às normas financeiras nacionais e internacionais.
+\end{itemize}
+
+A Tabela~\ref{tab:cbn-comparativo} sintetiza o comparativo estrutural entre o cenário operacional anterior (2015) e o ambiente transformado sob o sistema de governança do COBIT.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\caption{Comparativo da Governança de TI no Banco Central da Nigéria (2015 vs. Pós-COBIT)}
+\label{tab:cbn-comparativo}
+\begin{tabularx}{\textwidth}{|l|X|X|}
+\hline
+\textbf{Dimensão de Análise} & \textbf{Cenário Pré-COBIT (2015)} & \textbf{Cenário Pós-Implementação do COBIT} \\ \hline
+\textbf{Postura Operacional} & Reativa, dispersa e focada em ``apagar incêndios'' cotidianos \cite{teitler2022case}. & Proativa, com \textit{roadmap} estratégico planejado e reportado sistematicamente à direção \cite{teitler2022case}. \\ \hline
+\textbf{Direitos Decisórios} & Negócio contornava a TI (\textit{shadow IT}) e obtinha aprovações diretas no conselho \cite{teitler2022case}. & Aprovação desvinculada do conselho isolado; tramitação e triagem obrigatórias no comitê compartilhado de TI \cite{teitler2022case,weill2004governance}. \\ \hline
+\textbf{Realização de Valor} & Benefícios presumidos e não acompanhados após a entrega dos projetos \cite{teitler2022case}. & Rastreamento e acompanhamento formal de benefícios ao longo de todo o ciclo de vida (\textit{business case} ao pós-implantação) \cite{teitler2022case}. \\ \hline
+\textbf{Alinhamento Estratégico} & Estratégia de TI tratada de forma estanque e descompassada em relação ao negócio \cite{teitler2022case}. & TI incorporada como elemento nuclear no plano estratégico geral do banco \cite{teitler2022case,weill2004governance}. \\ \hline
+\textbf{Gestão de Risco} & Riscos cibernéticos e operacionais tratados como problemas técnicos isolados da TI \cite{teitler2022case}. & Reporte mensal regular de riscos de TI integrado diretamente à Matriz de Risco Corporativo do banco \cite{teitler2022case}. \\ \hline
+\end{tabularx}
+\par\vspace{3pt}
+{\footnotesize \textbf{Fonte:} Adaptado de \citeonline{teitler2022case}.}
+\end{table}
